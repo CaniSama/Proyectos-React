@@ -1,0 +1,13 @@
+.ContenedorP{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid gray;
+    padding: 40px;
+    background-color: gold;
+}
+.ContenedorS{
+    text-align: center;
+
+}
