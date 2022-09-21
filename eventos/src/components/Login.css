@@ -5,12 +5,15 @@
     transform: translate(-50%, -50%);
     border: 1px solid gray;
     padding: 40px;
-    background-color: gold;
+    background-color: rgb(190, 189, 179);
     border-radius: 5px;
+   
 }
 .ContenedorS{
-    text-align: center;
-    border: 1px solid gray;
     
+    text-align: center;
+    border-radius: 8px solid gray;
+    margin: auto;
 
 }
+
