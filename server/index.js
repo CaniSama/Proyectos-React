@@ -1,20 +1,10 @@
-const express = require("express");
-const bodyParserer = require("body-parser");
-const mysql = require("mysql");
-const cors = require("cors");
+const app = require("./config/server");
+const dbConnection = require("./config/bdconnection");
 
-const app = express();
 
-app.use(express.json());
-app.use(bodyParserer.urlencoded({ extended: true }));
-app.use(cors());
+const db = dbConnection();
 
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "evento_cit_p",
-});
+
 
 app.post("/login", (req, res) => {
   const username = req.body.username;
@@ -37,6 +27,8 @@ app.post("/login", (req, res) => {
   );
 });
 
-app.listen(3001, () => {
-  console.log("Running Server 3001");
+
+//Iniciando servidor
+app.listen(app.get("port"), () => {
+  console.log("server on port ", app.get("port"));
 });
